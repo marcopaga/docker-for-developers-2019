@@ -1,4 +1,8 @@
-## kubernetes on minikube
+# Cheat Sheet
+
+https://www.docker.com/sites/default/files/Docker_CheatSheet_08.09.2016_0.pdf
+
+# kubernetes on minikube
 
 ```
 minikube start --vm-driver virtualbox --memory 4096 --cpus 3
@@ -20,7 +24,5 @@ kubectl delete pod,service,deployment,secret -l app=workshop
 
 ```
 minikube service eureka
-
-minikube service zipkin
 
 ```
