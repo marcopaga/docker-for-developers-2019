@@ -23,3 +23,6 @@ http $(minikube service maintenance --url)/metrics
 kubectl delete pod,service,deployment,secret -l app=workshop
 
 ```
+
+License: CC BY-SA 4.0
+Marco Paga
