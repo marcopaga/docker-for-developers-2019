@@ -1,10 +1,6 @@
 version: '3'
 
 services:
-  zipkin:
-    image: openzipkin/zipkin
-    ports:
-      - "9411:9411"
   frontend:
     build: frontend/.
     image: marcopaga/plain-frontend:1
@@ -13,7 +9,7 @@ services:
     environment:
       - ZIPKIN_HOST=zipkin
     depends_on:
-      - zipkin
+      - backend
   backend:
     build: backend/.
     image: marcopaga/plain-backend:1
@@ -21,5 +17,3 @@ services:
       - "8090:8090"
     environment:
       - ZIPKIN_HOST=zipkin
-    depends_on:
-      - zipkin
