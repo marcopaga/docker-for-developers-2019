@@ -1,0 +1,13 @@
+server:
+  port: 8091
+
+management:
+  security:
+    enabled: false
+
+spring:
+  zipkin:
+    base-url: http://${zipkin.host:localhost}:${zipkin.port:9411}/
+
+backend:
+  url: http://backend:8090
